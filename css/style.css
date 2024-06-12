@@ -1,0 +1,343 @@
+:root {
+    --primary: #0ef;
+    --secondary: #2c4766;
+    --white: #fff;
+    --black: #1f293a;
+    --imgWidth: 260px
+}
+
+*,
+html {
+    list-style: none;
+    scroll-behavior: smooth;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 1.8em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+body {
+    background: var(--black);
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* ----HEADER START---- */
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5em;
+}
+
+.header .logo {
+    font-size: 45px;
+}
+
+.header .logo span {
+    color: var(--primary);
+    font-size: 50px;
+}
+
+.header .nav-menu ul {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.nav-menu ul li {
+    padding: .7em .5em;
+    text-transform: uppercase;
+}
+
+li .menu-item {
+    position: relative;
+}
+
+li .menu-item::after {
+    content: '';
+    position: absolute;
+    bottom: -.4em;
+    left: 0;
+    background: var(--primary);
+    width: 0%;
+    height: 2px;
+    transition: width .3s;
+}
+
+li .menu-item.active::after,
+li .menu-item:hover::after {
+    width: 100%;
+}
+
+/* ----HEADER END---- */
+/* ----HOME START---- */
+.body {
+    display: block;
+    padding: 0 45px;
+}
+
+.container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home-text {
+    width: 60%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-text span {
+    color: var(--primary);
+}
+
+.home-text .btn-link {
+    padding: .2em .4em;
+    text-align: center;
+    margin-top: 25px;
+    width: 180px;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    color: var(--primary);
+    transition: .3s;
+}
+
+.home-text .btn-link:hover {
+    color: var(--black);
+    background: var(--primary);
+}
+
+.home-img {
+    transition: .3s;
+    width: auto;
+    height: 388px;
+    border: 2px solid var(--primary);
+    border-radius:10px;
+}
+
+
+/* ----HOME END---- */
+
+
+.container>p {
+    text-align: justify;
+}
+
+.aboutMe-content {
+    width: calc(100% - 290px);
+}
+
+.aboutMe-tittle,
+.work-text,
+.contact-text {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2em;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.aboutMe-text {
+    text-align: justify;
+}
+
+.tab-menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab-menu a {
+    position: relative;
+    padding: .2em .4em;
+    top: 10px;
+}
+
+.tab-menu a.active {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom: none;
+    transition: .2s;
+}
+
+.tab-menu a:hover {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.tab-menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.tab-content {
+    margin-top: 15px;
+    height: auto;
+    margin-top: 25px;
+}
+
+.tab-content p {
+    margin-bottom: .8em;
+    font-size: 16px;
+}
+
+.tab-content p span {
+    display: block;
+    color: var(--primary);
+    line-height: .8em;
+}
+
+.tab-content-item {
+    display: none;
+}
+
+.tab-content-item.active {
+    display: block;
+}
+
+.tab-content-item .skills {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.d-box {
+    width: 250px;
+    height: 15px;
+    border: 1px solid var(--secondary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.d-box .progress {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--primary);
+    height: 100%;
+}
+
+#work {
+    align-items: start;
+}
+
+.card {
+    width: 350px;
+    height: auto;
+    border: 1px solid var(--primary);
+    border-radius:8px;
+    overflow: hidden;
+    margin-top: 1.4em;
+}
+
+.card-header {
+    width: 100%;
+    position: relative;
+}
+
+.card-header::after {
+    content: '';
+    text-align: center;
+    position: absolute;
+    bottom: -25px;
+    left: 25px;
+    box-shadow: 0 5px 15px 0 var(--black);
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    background: var(--black) url(../photos/PC.png);
+    box-shadow: inset 0 0 5px 1px var(--primary);
+    border-radius:5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.2s ease-in-out;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid var(--primary);
+    transition: 0.2s ease-in-out;
+}
+.card:hover .card-img{
+    transform:scale(1.1,1.2);
+}
+.card:hover .card-header::after{
+    bottom: -30px;
+}
+
+.card-block {
+    padding: 25px;
+}
+.form-contact-container{
+    position: relative;
+    width:100%;
+}
+.form-contact-container form{
+    position:absolute;
+    left:50%;
+    top: 20px;
+    transform:translateX(-50%);
+    width: 500px;
+    height: 420px;
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    padding: 45px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.form-contact-container .input-box{
+    position:relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.input-box input,
+.input-box textarea
+{
+    width: 100%;
+    height: 55px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 16px;
+    color: var(--white);
+}
+.input-box label{
+    position: absolute;
+    top:50%;
+    left: 20px;
+    padding: 0 5px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+.input-box input:focus~label,
+.input-box input:valid~label,
+.input-box textarea:focus~label,
+.input-box textarea:valid~label{
+    top:0;
+    left:12px;
+    font-size: 14px;
+    background: var(--black);
+}

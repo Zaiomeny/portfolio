@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaiomeny Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/myscript.js" defer></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="logo">
+                <span>P</span>ortfoli<span>o</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a class="menu-item active" href="#home">Accueil</a></li>
+                    <li><a class="menu-item" href="#aboutMe">Mes à propos</a></li>
+                    <li><a class="menu-item" href="#work">Projets</a></li>
+                    <li><a class="menu-item" href="#contact">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="body">
+            <div class="container" id="home">
+                <div class="home-text">
+                    <h2>Je suis <span>Lastname</span> FIRSTNAME, </h2>
+                    <p>Développeur Web Junior</p>
+                    <p>
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                    <a href="#aboutMe" class="btn-link">En savoir plus</a>
+                </div>
+                <img src="photos/me.png" alt="add your on photo" class="home-img">
+            </div>
+            <div id="aboutMe" class="container">
+                <div class="aboutMe-tittle">A propos de moi</div>
+                <img src="photos/me.png" alt="add your on photo" class="home-img">
+                <div class="aboutMe-content">
+                    <p class="aboutMe-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Saepe illo dicta incidunt magni, amet fugit officiis deserunt
+                        beatae quidem error est, nam animi aut quasi fuga?
+                        Quaerat impedit a minima!
+                    </p>
+                    <div class="tab-menu">
+                        <a href="#education" class="tab-menu-item active">Educations</a>
+                        <a href="#skills" class="tab-menu-item">Compétences</a>
+                        <a href="#other" class="tab-menu-item">Autres</a>
+                    </div>
+                    <div class="tab-content">
+                        <div id="education" class="tab-content-item active">
+                            <p>
+                                <span>2022 - 2024 </span> Lorem, ipsum.
+                            </p>
+                            <p>
+                                <span>2021:</span>
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque natus impedit repudiandae optio necessitatibus ab esse quaerat soluta error provident, inventore illum aliquam!
+                            </p>
+                            <p>
+                                <span>2017: </span> Obtention du Diplôme de xxxxxxxx
+                            </p>
+                        </div>
+                        <div id="skills" class="tab-content-item">
+                            <div class="skills">
+                                <div>
+                                    <h2>HTML</h2>
+                                    <div class="d-box">
+                                        <div class="progress" style="width:80%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2>CSS</h2>
+                                    <div class="d-box">
+                                        <div class="progress" style="width:75%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2>Javascript</h2>
+                                    <div class="d-box">
+                                        <div class="progress" style="width:60%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2>PHP</h2>
+                                    <div class="d-box">
+                                        <div class="progress" style="width:75%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2>VBA Access</h2>
+                                    <div class="d-box">
+                                        <div class="progress" style="width:70%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2>C++</h2>
+                                    <div class="d-box">
+                                        <div class="progress" style="width:45%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2>Java</h2>
+                                    <div class="d-box">
+                                        <div class="progress" style="width:35%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="other" class="tab-content-item">
+                            <div>
+                                <h2>SGBDR</h2>
+                                <h2>Théorie de réseaux informatiques</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="work" class="container">
+                <div class="work-text">Mes antécédentes réalisations</div>
+                <div class="card">
+                    <div class="card-header">
+                        <img src="photos/project-1.png" class="card-img">
+                    </div>
+                    <div class="card-block">
+                        Mon tout premier projet lorem ipsum dolor si.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <img src="photos/project-2.png" class="card-img">
+                    </div>
+                    <div class="card-block">
+                        Deuxième projet lorem ipsum dolor sit amet consectetur.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <img src="photos/project-3.png" class="card-img">
+                    </div>
+                    <div class="card-block">
+                        Troisième projet Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                </div>
+            </div>
+            <div id="contact" class="container">
+                <div class="contact-text">Contact</div>
+                <div class="form-contact-container">
+                    <form action="" method="post">
+                        <h2 class="text-form">Contactez-moi</h2>
+                        <div class="input-box">
+                            <input type="text" name="" id="" required>
+                            <label for="">Société</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" name="" id="" required>
+                            <label for="">Téléphone</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" name="" id="" required>
+                            <label for="">Email</label>
+                        </div>
+                        <div class="input-box">
+                            <textarea name="" id="" cols="5" required></textarea>
+                            <label for="">Message</label>
+                        </div>
+                        <div class="input-box">
+                            <button type="submit" class="btn-submit">Contacter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
