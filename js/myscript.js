@@ -7,23 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
             el.classList.remove("active")
         })
     }
-
-
-    for (let link of links) {
-        link.addEventListener('click', (e) => {
-            removeActiveClass(links)
-            e.target.classList.add('active')
-        })
+const activeLink = (elements, targeted = false) => {
+        for (let element of elements) {
+            element.addEventListener('click', (e) => {
+                removeActiveClass(elements)
+                e.target.classList.add('active')
+                if (targeted) {
+                    const targetId = e.target.getAttribute('href')
+                    const tab_contents = document.querySelectorAll('.tab-content div')
+                    removeActiveClass(tab_contents)
+                    document.querySelector(targetId).classList.add('active')
+                }
+            })
+        }
     }
-
-    for (let tab_menu of tab_menus) {
-        tab_menu.addEventListener('click', (e) => {
-            let targetElementId = e.target.getAttribute('href')
-            removeActiveClass(tab_contents)
-            e.target.classList.add('active')
-            removeActiveClass(tab_menus)
-            document.querySelector(targetElementId).classList.add('active')
-        })
-    }
-
+    activeLink(links)
+    activeLink(tab_menus, true)
 })
