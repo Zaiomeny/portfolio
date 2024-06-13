@@ -16,12 +16,13 @@ html {
     box-sizing: border-box;
     font-size: 20px;
     line-height: 1.8em;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: 'calibri', 'sans-serif';
 }
 
 body {
     background: var(--black);
-    padding: 10px 20px;
+    padding: 20px 40px;
+    display: block;
 }
 
 a {
@@ -34,7 +35,7 @@ a {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 1.5em;
+    width:100% ;
 }
 
 .header .logo {
@@ -48,12 +49,13 @@ a {
 
 .header .nav-menu ul {
     display: flex;
-    align-items: center;
+    align-items:center;
+    align-content: space-between;
     flex-flow: row wrap;
 }
 
 .nav-menu ul li {
-    padding: .7em .5em;
+    padding: .7em .5em 0 .5em;
     text-transform: uppercase;
 }
 
@@ -69,7 +71,7 @@ li .menu-item::after {
     background: var(--primary);
     width: 0%;
     height: 2px;
-    transition: width .3s;
+    transition: .3s;
 }
 
 li .menu-item.active::after,
@@ -79,10 +81,6 @@ li .menu-item:hover::after {
 
 /* ----HEADER END---- */
 /* ----HOME START---- */
-.body {
-    display: block;
-    padding: 0 45px;
-}
 
 .container {
     margin-top: 60px;
@@ -102,16 +100,19 @@ li .menu-item:hover::after {
 .home-text span {
     color: var(--primary);
 }
-
-.home-text .btn-link {
-    padding: .2em .4em;
+.btn{
     text-align: center;
-    margin-top: 25px;
-    width: 180px;
     border: 1px solid var(--primary);
-    border-radius: 8px;
+    transition: .2s ease;
+}
+.btn:hover{
+    cursor:pointer;
+}
+.home-text .btn-link {
+    margin-top: 25px;
+    width: 130px;
+    border-radius: 4px;
     color: var(--primary);
-    transition: .3s;
 }
 
 .home-text .btn-link:hover {
@@ -123,7 +124,8 @@ li .menu-item:hover::after {
     transition: .3s;
     width: auto;
     height: 388px;
-    border: 2px solid var(--primary);
+    border: 1px solid var(--secondary);
+    box-shadow: 0 0 1px 1px var(--primary);
     border-radius:10px;
 }
 
@@ -158,13 +160,13 @@ li .menu-item:hover::after {
     flex-wrap: wrap;
 }
 
-.tab-menu a {
+.tab-menu span {
     position: relative;
     padding: .2em .4em;
     top: 10px;
 }
 
-.tab-menu a.active {
+.tab-menu span.active {
     color: var(--primary);
     border: 1px solid var(--primary);
     border-top-left-radius: 2px;
@@ -173,12 +175,12 @@ li .menu-item:hover::after {
     transition: .2s;
 }
 
-.tab-menu a:hover {
+.tab-menu span:hover {
     color: var(--primary);
     cursor: pointer;
 }
 
-.tab-menu a::after {
+.tab-menu span::after {
     content: '';
     position: absolute;
     left: 0;
@@ -241,7 +243,8 @@ li .menu-item:hover::after {
 .card {
     width: 350px;
     height: auto;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
+    box-shadow: 0 0 1px 1px var(--primary);
     border-radius:8px;
     overflow: hidden;
     margin-top: 1.4em;
@@ -258,7 +261,6 @@ li .menu-item:hover::after {
     position: absolute;
     bottom: -25px;
     left: 25px;
-    box-shadow: 0 5px 15px 0 var(--black);
     z-index: 1;
     width: 70px;
     height: 70px;
@@ -274,7 +276,7 @@ li .menu-item:hover::after {
 .card-img {
     width: 100%;
     height: auto;
-    border-bottom: 1px solid var(--primary);
+    border-bottom: 1px solid var(--secondary);
     transition: 0.2s ease-in-out;
 }
 .card:hover .card-img{
@@ -296,15 +298,21 @@ li .menu-item:hover::after {
     left:50%;
     top: 20px;
     transform:translateX(-50%);
-    width: 500px;
-    height: 420px;
-    border: 2px solid var(--primary);
+    width: 420px;
+    height: 450px;
+    border: 2px solid var(--secondary);
+    box-shadow: 0 0 1px 1px var(--primary);
     border-radius: 10px;
-    padding: 45px;
+    padding: 20px 45px;
     display:flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+}
+.text-form{
+    font-weight:400;
+    font-size: 1.5em;
+    margin-bottom: .4em;
 }
 .form-contact-container .input-box{
     position:relative;
@@ -315,8 +323,8 @@ li .menu-item:hover::after {
 .input-box textarea
 {
     width: 100%;
-    height: 55px;
-    border: 2px solid var(--primary);
+    height: 50px;
+    border: 2px solid var(--secondary);
     background: transparent;
     outline: none;
     border-radius: 5px;
@@ -340,4 +348,15 @@ li .menu-item:hover::after {
     left:12px;
     font-size: 14px;
     background: var(--black);
+}
+.btn-submit{
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: 4px;
+    padding: 2px 8px;
+}
+.btn-submit:hover{
+    border: 1px solid var(--primary);
+    background: transparent;
+    color:var(--primary)
 }
