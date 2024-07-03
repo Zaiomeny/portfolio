@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.menu-item');
-    const tab_menus = document.querySelectorAll('.tab-menu span');
+    const tab_menus = document.querySelectorAll('.tab-menu a');
 
     const removeActiveClass = (elements) => {
         elements.forEach((el)=>{
@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 removeActiveClass(elements)
                 e.target.classList.add('active')
                 if (targeted) {
-                    const targetId = e.target.dataset.target
+                    e.preventDefault()
+                    const targetId = e.target.getAttribute('href')
                     const tab_contents = document.querySelectorAll('.tab-content div')
                     removeActiveClass(tab_contents)
                     document.querySelector(targetId).classList.add('active')
@@ -24,5 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     activeLink(links)
     activeLink(tab_menus, true)
+
+
+    //Toggle menu
+
+    const btn_toggle = document.querySelector('.menu-toggle')
+
+    btn_toggle.addEventListener('click',(e)=>{
+        document.querySelector('.nav-menu').classList.toggle('active')
+    })
 
 })
